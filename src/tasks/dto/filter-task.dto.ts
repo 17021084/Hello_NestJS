@@ -1,6 +1,11 @@
+import { IsIn, IsOptional } from 'class-validator';
 import { TaskStatus } from '../task.model';
 
 export class FilterTaskDto {
-  search?: string;
-  status?: TaskStatus;
+  @IsOptional()
+  search: string;
+
+  @IsOptional()
+  @IsIn([TaskStatus.DONE, TaskStatus.OPEN, TaskStatus.IN_PROGRESS]) //validate incoming request
+  status: TaskStatus;
 }
