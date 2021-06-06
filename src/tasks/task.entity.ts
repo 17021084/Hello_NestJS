@@ -1,5 +1,5 @@
 import { BaseEntity, Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
-import { TaskStatus } from './task.model';
+import { TaskStatus } from './task-status.enum';
 
 @Entity()
 export class Task extends BaseEntity {
@@ -12,6 +12,9 @@ export class Task extends BaseEntity {
   @Column()
   description: string;
 
-  @Column()
+  @Column('enum', {
+    enum: Object.values(TaskStatus), // This is possible since exported enums become objects. See http://bit.ly/2mnKqTR
+    name: 'status',
+  })
   status: TaskStatus;
 }

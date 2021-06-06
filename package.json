@@ -33,7 +33,6 @@
     "rxjs": "^6.6.6",
     "rxjs-compat": "^6.6.7",
     "typeorm": "^0.2.34",
-    "uuid": "^8.3.2",
     "webpack-pnp-externals": "^1.1.0"
   },
   "devDependencies": {
