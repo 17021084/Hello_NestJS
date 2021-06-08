@@ -10,7 +10,7 @@ import { User } from './user.entity';
 import * as bcrypt from 'bcrypt';
 
 @EntityRepository(User)
-export class UserRepositoty extends Repository<User> {
+export class UserRepository extends Repository<User> {
   async validateUserPassword(
     authcredentialsDto: AuthCredentialsDto,
   ): Promise<string> {
