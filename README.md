@@ -26,6 +26,10 @@
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
+
+
+### Query doc 
+[query](https://typeorm.delightful.studio/classes/_repository_repository_.repository.html#findone)
 ## Installation
 
 ```bash
